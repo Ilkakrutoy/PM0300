@@ -1,0 +1,778 @@
+CREATE DATABASE CollegeDB;
+
+Create table Специальности
+(
+	Id INT IDENTITY PRIMARY KEY,
+	Название NVARCHAR(50),
+	КоличествоСтудентов INT
+)
+
+Create table Корпуса
+(
+	Id INT IDENTITY PRIMARY KEY,
+	Название NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Адрес NVARCHAR(50)
+)
+
+Create table Отделы
+(
+	Id INT IDENTITY PRIMARY KEY,
+	Название NVARCHAR(50),
+)
+
+Create table Преподаватели
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+    Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Должность NVARCHAR(50),
+	Возраст Int,
+	НачалоРаботы Datetime,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50)
+)
+
+Create table Группы
+(
+	Id INT IDENTITY PRIMARY KEY,
+	Название NVARCHAR(50),
+	Специальность NVARCHAR(50),
+    КоличествоСтудентов INT
+)
+
+Create table Работники
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Должность NVARCHAR(50),
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50)
+)
+
+Create table Общежития
+(
+	Номер INT IDENTITY PRIMARY KEY,
+	Адрес NVARCHAR(50),
+	КоличествоКомнат INT,
+	КоличествоЛюдей INT
+)
+
+Create table СтудентыИ11
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ12
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ13
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ21
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ22
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ23
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ31
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ32
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыИ33
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС11
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС12
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС13
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС21
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС22
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС23
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС31
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС32
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыКС33
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП11
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП12
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП13
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП21
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП22
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП23
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП31
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП32
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыП33
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК11
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК12
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК13
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК21
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК22
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК23
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК31
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК32
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЭК33
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ11
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ12
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ13
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ21
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ22
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ23
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ31
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ32
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+Create table СтудентыЮ33
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ФИО NVARCHAR(50),
+	Специальность NVARCHAR(50),
+	Группа NVARCHAR(10),
+	Курс INT,
+	Логин NVARCHAR(10),
+    Пароль NVARCHAR(10),
+	Возраст Int,
+	НомерТелефона NVARCHAR(50),
+	Email NVARCHAR(50),
+	ДатаПоступления Datetime
+)
+
+CREATE TABLE КабинетыГлавныйКорпус
+(
+	Номер INT IDENTITY PRIMARY KEY,
+	Вместимость INT,
+	Назначение NVARCHAR(50),
+	Статус NVARCHAR(10)
+)
+
+CREATE TABLE КабинетыКорпусА
+(
+	Номер INT IDENTITY PRIMARY KEY,
+	Вместимость INT,
+	Назначение NVARCHAR(50),
+	Статус NVARCHAR(10)
+)
+
+CREATE TABLE КабинетыКорпусБ
+(
+	Номер INT IDENTITY PRIMARY KEY,
+	Вместимость INT,
+	Назначение NVARCHAR(50),
+	Статус NVARCHAR(10)
+)
+
+CREATE TABLE КабинетыЭкономическийКорпус
+(
+	Номер INT IDENTITY PRIMARY KEY,
+	Вместимость INT,
+	Назначение NVARCHAR(50),
+	Статус NVARCHAR(10)
+)
+
+CREATE TABLE КабинетыЮридическийКорпус
+(
+	Номер INT IDENTITY PRIMARY KEY,
+	Вместимость INT,
+	Назначение NVARCHAR(50),
+	Статус NVARCHAR(10)
+)
